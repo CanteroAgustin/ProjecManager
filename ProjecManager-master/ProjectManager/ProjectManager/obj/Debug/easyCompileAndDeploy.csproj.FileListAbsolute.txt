@@ -1,0 +1,14 @@
+C:\Users\agustin.cantero\Desktop\easyCompileAndDeployApp\easyCompileAndDeployApp\obj\Debug\easyCompileAndDeploy.csprojResolveAssemblyReference.cache
+C:\Users\agustin.cantero\Desktop\easyCompileAndDeployApp\easyCompileAndDeployApp\obj\Debug\easyCompileAndDeployApp.AddAppForm.resources
+C:\Users\agustin.cantero\Desktop\easyCompileAndDeployApp\easyCompileAndDeployApp\obj\Debug\easyCompileAndDeployApp.Form1.resources
+C:\Users\agustin.cantero\Desktop\easyCompileAndDeployApp\easyCompileAndDeployApp\obj\Debug\easyCompileAndDeployApp.Properties.Resources.resources
+C:\Users\agustin.cantero\Desktop\easyCompileAndDeployApp\easyCompileAndDeployApp\obj\Debug\easyCompileAndDeploy.csproj.GenerateResource.Cache
+C:\Users\agustin.cantero\Desktop\easyCompileAndDeployApp\easyCompileAndDeployApp\obj\Debug\easyCompileAndDeployApp.exe
+C:\Users\agustin.cantero\Desktop\easyCompileAndDeployApp\easyCompileAndDeployApp\bin\Debug\easyCompileAndDeployApp.exe.config
+C:\Users\agustin.cantero\Desktop\easyCompileAndDeployApp\easyCompileAndDeployApp\bin\Debug\easyCompileAndDeployApp.exe
+C:\Users\agustin.cantero\Desktop\easyCompileAndDeployApp\easyCompileAndDeployApp\bin\Debug\easyCompileAndDeployApp.pdb
+C:\Users\agustin.cantero\Desktop\easyCompileAndDeployApp\easyCompileAndDeployApp\bin\Debug\Entities.dll
+C:\Users\agustin.cantero\Desktop\easyCompileAndDeployApp\easyCompileAndDeployApp\bin\Debug\Entities.pdb
+C:\Users\agustin.cantero\Desktop\easyCompileAndDeployApp\easyCompileAndDeployApp\obj\Debug\easyCompileAndDeployApp.pdb
+C:\Users\agustin.cantero\Desktop\easyCompileAndDeployApp\easyCompileAndDeployApp\obj\Debug\easyCompileAndDeployApp.AddServerForm.resources
+C:\Users\agustin.cantero\Desktop\easyCompileAndDeployApp\easyCompileAndDeployApp\obj\Debug\easyCompileAndDeployApp.OpcionesForm.resources

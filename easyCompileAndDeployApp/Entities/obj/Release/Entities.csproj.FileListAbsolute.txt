@@ -1,5 +1,0 @@
-C:\Users\agustin.cantero\Desktop\easyCompileAndDeployApp\Entities\bin\Release\Entities.dll
-C:\Users\agustin.cantero\Desktop\easyCompileAndDeployApp\Entities\bin\Release\Entities.pdb
-C:\Users\agustin.cantero\Desktop\easyCompileAndDeployApp\Entities\obj\Release\Entities.csprojResolveAssemblyReference.cache
-C:\Users\agustin.cantero\Desktop\easyCompileAndDeployApp\Entities\obj\Release\Entities.dll
-C:\Users\agustin.cantero\Desktop\easyCompileAndDeployApp\Entities\obj\Release\Entities.pdb
