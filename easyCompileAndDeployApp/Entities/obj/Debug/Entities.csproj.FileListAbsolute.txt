@@ -1,0 +1,10 @@
+C:\Users\agustin.cantero\Desktop\FINAL LAB PROYECTOS\easyCompileAndDeployApp\Entities\bin\Debug\Entities.dll
+C:\Users\agustin.cantero\Desktop\FINAL LAB PROYECTOS\easyCompileAndDeployApp\Entities\bin\Debug\Entities.pdb
+C:\Users\agustin.cantero\Desktop\FINAL LAB PROYECTOS\easyCompileAndDeployApp\Entities\obj\Debug\Entities.dll
+C:\Users\agustin.cantero\Desktop\FINAL LAB PROYECTOS\easyCompileAndDeployApp\Entities\obj\Debug\Entities.pdb
+C:\Users\agustin.cantero\Desktop\FINAL LAB PROYECTOS\easyCompileAndDeployApp\Entities\obj\Debug\Entities.csprojResolveAssemblyReference.cache
+C:\Users\agustin.cantero\Desktop\easyCompileAndDeployApp\Entities\bin\Debug\Entities.dll
+C:\Users\agustin.cantero\Desktop\easyCompileAndDeployApp\Entities\bin\Debug\Entities.pdb
+C:\Users\agustin.cantero\Desktop\easyCompileAndDeployApp\Entities\obj\Debug\Entities.csprojResolveAssemblyReference.cache
+C:\Users\agustin.cantero\Desktop\easyCompileAndDeployApp\Entities\obj\Debug\Entities.dll
+C:\Users\agustin.cantero\Desktop\easyCompileAndDeployApp\Entities\obj\Debug\Entities.pdb
