@@ -71,7 +71,7 @@
             // 
             // btnAcceptAddApp
             // 
-            this.btnAcceptAddApp.Location = new System.Drawing.Point(13, 79);
+            this.btnAcceptAddApp.Location = new System.Drawing.Point(13, 66);
             this.btnAcceptAddApp.Name = "btnAcceptAddApp";
             this.btnAcceptAddApp.Size = new System.Drawing.Size(129, 38);
             this.btnAcceptAddApp.TabIndex = 4;
@@ -81,7 +81,7 @@
             // 
             // btnCancelAddApp
             // 
-            this.btnCancelAddApp.Location = new System.Drawing.Point(148, 79);
+            this.btnCancelAddApp.Location = new System.Drawing.Point(148, 66);
             this.btnCancelAddApp.Name = "btnCancelAddApp";
             this.btnCancelAddApp.Size = new System.Drawing.Size(124, 38);
             this.btnCancelAddApp.TabIndex = 5;
@@ -104,7 +104,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(444, 129);
+            this.ClientSize = new System.Drawing.Size(444, 115);
             this.Controls.Add(this.btnAgregarRuta);
             this.Controls.Add(this.btnCancelAddApp);
             this.Controls.Add(this.btnAcceptAddApp);
@@ -113,7 +113,7 @@
             this.Controls.Add(this.txtPathAddApp);
             this.Controls.Add(this.txtNameAddApp);
             this.Name = "AddServerForm";
-            this.Text = "AddAppForm";
+            this.Text = "Nuevo Servidor";
             this.Load += new System.EventHandler(this.AddServerForm_Load_1);
             this.ResumeLayout(false);
             this.PerformLayout();

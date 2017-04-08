@@ -95,18 +95,7 @@ namespace ProjectManager
                 }
             }
 
-            
-            string wordWithOutWhiteSpaces = txtPiezas.Text.Replace(" ", "");
-            List<string> piezas = new List<string>();
-            string[] words = wordWithOutWhiteSpaces.Split(',');
-            
-            for (int i = 0; i < words.Count(); i++)
-            {
-               if (!"".Equals(words[i]))
-                   piezas.Add(words[i]);
-            }
-
-            foreach(string p in piezas)
+            foreach (string p in cLBPiezas.CheckedItems)
             {
                 string[] files = new string[10];
                 files = Directory.GetFiles(origen, "*.war", SearchOption.AllDirectories);
@@ -135,7 +124,8 @@ namespace ProjectManager
         private void cmbProyectos_SelectedIndexChanged(object sender, EventArgs e)
         {
             string[] files = new string[10];
-                     
+            cLBPiezas.Items.Clear();
+
             foreach (Apps app in listApps)
             {
                 if (app.Name.Equals(cmbProyectos.SelectedItem))
@@ -149,19 +139,21 @@ namespace ProjectManager
             }
             for (int i = 0; i < files.Count(); i++)
             {
+                
+
                 piezaADeployar = new PiezaADeployar();
                 DirectoryInfo dir = new DirectoryInfo(files[i]);
                 piezaADeployar.Ruta = dir.FullName;
                 piezaADeployar.Nombre = dir.Name;
                 piezasADeployar.Add(piezaADeployar);
-                cmbSelectPiezas.Items.Add(piezaADeployar.Nombre);
+                cLBPiezas.Items.Add(piezaADeployar.Nombre);
                 
             }
         }
 
-        private void cmbSelectPiezas_SelectedIndexChanged(object sender, EventArgs e)
+        private void panel1_Paint(object sender, PaintEventArgs e)
         {
-            txtPiezas.Text += cmbSelectPiezas.SelectedItem+", ";
+
         }
 
         

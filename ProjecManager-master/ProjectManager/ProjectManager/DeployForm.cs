@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 using Entities;
-namespace easyCompileAndDeployApp
+namespace ProjectManager
 {
     public partial class DeployForm : Form
     {

@@ -36,8 +36,7 @@
             this.cmbProyectos = new System.Windows.Forms.ComboBox();
             this.lblTitulo = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.txtPiezas = new System.Windows.Forms.TextBox();
-            this.cmbSelectPiezas = new System.Windows.Forms.ComboBox();
+            this.cLBPiezas = new System.Windows.Forms.CheckedListBox();
             this.SuspendLayout();
             // 
             // btnCompilar
@@ -114,29 +113,22 @@
             this.label3.TabIndex = 7;
             this.label3.Text = "Seleccione las piezas a deployar";
             // 
-            // txtPiezas
+            // cLBPiezas
             // 
-            this.txtPiezas.Location = new System.Drawing.Point(12, 191);
-            this.txtPiezas.Name = "txtPiezas";
-            this.txtPiezas.Size = new System.Drawing.Size(436, 20);
-            this.txtPiezas.TabIndex = 8;
-            // 
-            // cmbSelectPiezas
-            // 
-            this.cmbSelectPiezas.FormattingEnabled = true;
-            this.cmbSelectPiezas.Location = new System.Drawing.Point(12, 158);
-            this.cmbSelectPiezas.Name = "cmbSelectPiezas";
-            this.cmbSelectPiezas.Size = new System.Drawing.Size(436, 21);
-            this.cmbSelectPiezas.TabIndex = 9;
-            this.cmbSelectPiezas.SelectedIndexChanged += new System.EventHandler(this.cmbSelectPiezas_SelectedIndexChanged);
+            this.cLBPiezas.BackColor = System.Drawing.SystemColors.Control;
+            this.cLBPiezas.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.cLBPiezas.FormattingEnabled = true;
+            this.cLBPiezas.Location = new System.Drawing.Point(16, 158);
+            this.cLBPiezas.Name = "cLBPiezas";
+            this.cLBPiezas.Size = new System.Drawing.Size(317, 90);
+            this.cLBPiezas.TabIndex = 10;
             // 
             // OpcionesForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(460, 226);
-            this.Controls.Add(this.cmbSelectPiezas);
-            this.Controls.Add(this.txtPiezas);
+            this.ClientSize = new System.Drawing.Size(341, 252);
+            this.Controls.Add(this.cLBPiezas);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.lblTitulo);
             this.Controls.Add(this.label2);
@@ -163,7 +155,6 @@
         private System.Windows.Forms.ComboBox cmbProyectos;
         private System.Windows.Forms.Label lblTitulo;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txtPiezas;
-        private System.Windows.Forms.ComboBox cmbSelectPiezas;
+        private System.Windows.Forms.CheckedListBox cLBPiezas;
     }
 }

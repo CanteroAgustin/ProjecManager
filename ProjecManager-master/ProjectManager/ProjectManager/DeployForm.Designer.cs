@@ -1,4 +1,4 @@
-﻿namespace easyCompileAndDeployApp
+﻿namespace ProjectManager
 {
     partial class DeployForm
     {
