@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Exceptions;
 
 namespace ProjectManager
 {
@@ -22,6 +23,7 @@ namespace ProjectManager
         private XmlSerialize<Server> ser1 = new XmlSerialize<Server>();
         private List<PiezaADeployar> piezasADeployar = new List<PiezaADeployar>();
         private PiezaADeployar piezaADeployar;
+        public bool vacio; // Variable utilizada para saber si hay algún TextBox vacio.
 
         public OpcionesForm()
         {
@@ -31,6 +33,7 @@ namespace ProjectManager
 
         private void btnCompilar_Click(object sender, EventArgs e)
         {
+            this.validar(this);
             if (listApps.Count > 0)
             {
                 foreach (Apps app in listApps)
@@ -45,9 +48,13 @@ namespace ProjectManager
 
         private void OpcionesForm_Load(object sender, EventArgs e)
         {
-            listApps = ser.DesSerializarXML(listApps, pathProyectos);
-            serversList = ser1.DesSerializarXML(serversList, serverPath);
             
+            if (File.Exists(pathProyectos))
+                listApps = ser.DesSerializarXML(listApps, pathProyectos);
+
+            if (File.Exists(serverPath))
+                serversList = ser1.DesSerializarXML(serversList, serverPath);
+
             if (listApps.Count > 0)
             {
                 foreach (Apps app in listApps)
@@ -70,7 +77,10 @@ namespace ProjectManager
             string origen = "";
             string destino = "";
 
+            if(File.Exists(pathProyectos))
             listApps = ser.DesSerializarXML(listApps, pathProyectos);
+
+            if (File.Exists(serverPath))
             serversList = ser1.DesSerializarXML(serversList, serverPath);
 
             if (listApps.Count > 0)
@@ -140,7 +150,6 @@ namespace ProjectManager
             for (int i = 0; i < files.Count(); i++)
             {
                 
-
                 piezaADeployar = new PiezaADeployar();
                 DirectoryInfo dir = new DirectoryInfo(files[i]);
                 piezaADeployar.Ruta = dir.FullName;
@@ -157,6 +166,19 @@ namespace ProjectManager
         }
 
         
+        private void validar(Form formulario)
+        {
+            foreach (Control oControls in formulario.Controls) // Buscamos en cada TextBox de nuestro Formulario.
+            {
+                if (oControls is TextBox & oControls.Text == String.Empty) // Verificamos que no este vacio.
+                {
+                    vacio = true; // Si esta vacio el TextBox asignamos el valor True a nuestra variable.
+                }
+            }
+            if (vacio == true) MessageBox.Show("Favor de llenar todos los campos."); // Si nuestra variable es verdadera mostramos un mensaje.
+            vacio = false; // Devolvemos el valor original a nuestra variable.
+        }
+
 
     }
 }

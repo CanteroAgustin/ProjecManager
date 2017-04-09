@@ -14,6 +14,8 @@ namespace ProjectManager
 {
     public partial class AddAppForm : Form
     {
+        bool vacio = false; // Variable utilizada para saber si hay algún TextBox vacio.
+
         public AddAppForm()
         {
             InitializeComponent();
@@ -27,6 +29,12 @@ namespace ProjectManager
 
         private void btnAcceptAddApp_Click(object sender, EventArgs e)
         {
+            bool volver = this.validarCamposVacios(this);
+            if (volver)
+            {
+                return;
+            }
+
             bool guardadoConExito = false;
             bool puedeGuardar = true;
             string curFile = "../../../proyectos.xml";
@@ -40,15 +48,7 @@ namespace ProjectManager
             app.Name = txtNameAddApp.Text;
             app.Path = txtPathAddApp.Text;
             
-            string wordWithOutWhiteSpaces = txtPiezas.Text.Replace(" ", "");
             
-            string[] words = wordWithOutWhiteSpaces.Split(',');
-            for (int i = 0; i < words.Count(); i++)
-            {
-                if (!"".Equals(words[i]))
-                app.Piezas.Add(words[i]);
-            }
-
             if (listApps.Count > 0)
             {
                 for (int i = 0; i < listApps.Count; i++ )
@@ -67,7 +67,7 @@ namespace ProjectManager
                 }
                 else
                 {
-                    MessageBox.Show("No se puede agregar el proyecto, el nombre ya existe", "",
+                    MessageBox.Show("No se puede agregar el proyecto, el nombre ya existe", "El Proyecto ya existe",
                     MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
                 }
             }
@@ -97,17 +97,17 @@ namespace ProjectManager
                 txtPathAddApp.Text = fbd.SelectedPath;
         }
 
-        private void btnPiezas_Click(object sender, EventArgs e)
+        private bool validarCamposVacios(Form formulario)
         {
-            OpenFileDialog openFileDialog = new OpenFileDialog();
-
-            openFileDialog.InitialDirectory = "c:\\";
-
-            if (openFileDialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+            foreach (Control oControls in formulario.Controls) // Buscamos en cada TextBox de nuestro Formulario.
             {
-                txtPiezas.Text += openFileDialog.FileName+",";
-                
+                if (oControls is TextBox & oControls.Text == String.Empty) // Verificamos que no este vacio.
+                {
+                    vacio = true; // Si esta vacio el TextBox asignamos el valor True a nuestra variable.
+                }
             }
+            if (vacio == true) MessageBox.Show("Ningun campo puede quedar vacio."); // Si nuestra variable es verdadera mostramos un mensaje.
+            return vacio;
         }
 
     }

@@ -6,12 +6,18 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Xml;
 using System.Xml.Serialization;
+using Exceptions;
 
 namespace Entities
 {
     public class XmlSerialize <T>
     {
-        
+        /// <summary>
+        /// Serializa la lista de datos recibida en XML
+        /// </summary>
+        /// <param name="t">Lista a serializar</param>
+        /// <param name="path">Ruta donde se alojara el archivo</param>
+        /// <returns></returns>
         public bool SerializarXML(List<T> t, string path)
         {
             try
@@ -28,6 +34,12 @@ namespace Entities
             }
         }
 
+        /// <summary>
+        /// Desserializa un archivo XML en una lista recibida por parametros
+        /// </summary>
+        /// <param name="t">Lista en la que se guardan los datos del XML</param>
+        /// <param name="path">Ruta donde esta el archivo a deserializar</param>
+        /// <returns></returns>
         public List<T> DesSerializarXML(List<T> t, string path)
         {
             try
@@ -40,7 +52,7 @@ namespace Entities
             }
             catch (Exception e)
             {
-                throw new Exception(e.Message);
+                throw new ArchivoInexistenteException(e.Message);
             }
         }
     }

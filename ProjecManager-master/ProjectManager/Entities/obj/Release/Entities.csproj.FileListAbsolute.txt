@@ -2,3 +2,4 @@ C:\Users\agustin.cantero\Desktop\ProjectManager\Entities\bin\Release\Entities.dl
 C:\Users\agustin.cantero\Desktop\ProjectManager\Entities\bin\Release\Entities.pdb
 C:\Users\agustin.cantero\Desktop\ProjectManager\Entities\obj\Release\Entities.dll
 C:\Users\agustin.cantero\Desktop\ProjectManager\Entities\obj\Release\Entities.pdb
+C:\Users\agustin.cantero\Desktop\ProjectManager\Entities\obj\Release\Entities.csprojResolveAssemblyReference.cache
