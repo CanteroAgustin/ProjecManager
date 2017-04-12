@@ -115,7 +115,8 @@ namespace ProjectManager
                     DirectoryInfo dir = new DirectoryInfo(files[i]);
                     if (dir.Name.Equals(p))
                     {
-                        Deployer.Deployar(dir.FullName, destino + "/" + p);
+                        string destinoCompleto = System.IO.Path.Combine(destino,p);
+                        Deployer.Deployar(dir.FullName, destinoCompleto);
                     }
                 }
             }
