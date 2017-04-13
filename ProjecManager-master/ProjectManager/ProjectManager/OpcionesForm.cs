@@ -198,6 +198,49 @@ namespace ProjectManager
             vacio = false; // Devolvemos el valor original a nuestra variable.
         }
 
+        private void btnEliminarProyecto_Click(object sender, EventArgs e)
+        {
+            foreach(Apps p in listApps)
+            {
+                if (p.Name.Equals(cmbProyectos.SelectedItem))
+                {
+                    listApps.Remove(p);
+                    ser.SerializarXML(listApps, pathProyectos);
+                    cmbProyectos.Items.Clear();
+                    break;
+                }
+            }
+            if (listApps.Count > 0)
+            {
+                foreach (Apps app in listApps)
+                {
+                    cmbProyectos.Items.Add(app.Name);
+                }
+            }
+            
+        }
+
+        private void btnEliminarServidor_Click(object sender, EventArgs e)
+        {
+            foreach (Server s in serversList)
+            {
+                if (s.Name.Equals(cmbServidores.SelectedItem))
+                {
+                    serversList.Remove(s);
+                    ser1.SerializarXML(serversList, serverPath);
+                    cmbServidores.Items.Clear();
+                    break;
+                }
+            }
+            if (serversList.Count > 0)
+            {
+                foreach (Server s in serversList)
+                {
+                    cmbServidores.Items.Add(s.Name);
+                }
+            }
+        }
+
 
     }
 }

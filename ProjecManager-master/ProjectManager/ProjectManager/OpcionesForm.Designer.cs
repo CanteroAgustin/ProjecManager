@@ -37,6 +37,8 @@
             this.lblTitulo = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.cLBPiezas = new System.Windows.Forms.CheckedListBox();
+            this.btnEliminarProyecto = new System.Windows.Forms.Button();
+            this.btnEliminarServidor = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnCompilar
@@ -61,6 +63,7 @@
             // 
             // cmbServidores
             // 
+            this.cmbServidores.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbServidores.FormattingEnabled = true;
             this.cmbServidores.Location = new System.Drawing.Point(155, 107);
             this.cmbServidores.Name = "cmbServidores";
@@ -80,7 +83,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(155, 29);
+            this.label2.Location = new System.Drawing.Point(155, 24);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(115, 13);
             this.label2.TabIndex = 5;
@@ -88,10 +91,12 @@
             // 
             // cmbProyectos
             // 
+            this.cmbProyectos.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbProyectos.FormattingEnabled = true;
-            this.cmbProyectos.Location = new System.Drawing.Point(155, 47);
+            this.cmbProyectos.Location = new System.Drawing.Point(155, 46);
             this.cmbProyectos.Name = "cmbProyectos";
             this.cmbProyectos.Size = new System.Drawing.Size(178, 21);
+            this.cmbProyectos.Sorted = true;
             this.cmbProyectos.TabIndex = 4;
             this.cmbProyectos.SelectedIndexChanged += new System.EventHandler(this.cmbProyectos_SelectedIndexChanged);
             // 
@@ -123,11 +128,43 @@
             this.cLBPiezas.Size = new System.Drawing.Size(317, 90);
             this.cLBPiezas.TabIndex = 10;
             // 
+            // btnEliminarProyecto
+            // 
+            this.btnEliminarProyecto.BackColor = System.Drawing.Color.Transparent;
+            this.btnEliminarProyecto.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlDark;
+            this.btnEliminarProyecto.FlatAppearance.BorderSize = 0;
+            this.btnEliminarProyecto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEliminarProyecto.ForeColor = System.Drawing.Color.Red;
+            this.btnEliminarProyecto.Location = new System.Drawing.Point(339, 44);
+            this.btnEliminarProyecto.Name = "btnEliminarProyecto";
+            this.btnEliminarProyecto.Size = new System.Drawing.Size(21, 23);
+            this.btnEliminarProyecto.TabIndex = 11;
+            this.btnEliminarProyecto.Text = "X";
+            this.btnEliminarProyecto.UseVisualStyleBackColor = false;
+            this.btnEliminarProyecto.Click += new System.EventHandler(this.btnEliminarProyecto_Click);
+            // 
+            // btnEliminarServidor
+            // 
+            this.btnEliminarServidor.BackColor = System.Drawing.Color.Transparent;
+            this.btnEliminarServidor.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlDark;
+            this.btnEliminarServidor.FlatAppearance.BorderSize = 0;
+            this.btnEliminarServidor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEliminarServidor.ForeColor = System.Drawing.Color.Red;
+            this.btnEliminarServidor.Location = new System.Drawing.Point(339, 107);
+            this.btnEliminarServidor.Name = "btnEliminarServidor";
+            this.btnEliminarServidor.Size = new System.Drawing.Size(21, 23);
+            this.btnEliminarServidor.TabIndex = 12;
+            this.btnEliminarServidor.Text = "X";
+            this.btnEliminarServidor.UseVisualStyleBackColor = false;
+            this.btnEliminarServidor.Click += new System.EventHandler(this.btnEliminarServidor_Click);
+            // 
             // OpcionesForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(341, 252);
+            this.ClientSize = new System.Drawing.Size(370, 252);
+            this.Controls.Add(this.btnEliminarServidor);
+            this.Controls.Add(this.btnEliminarProyecto);
             this.Controls.Add(this.cLBPiezas);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.lblTitulo);
@@ -137,6 +174,7 @@
             this.Controls.Add(this.cmbServidores);
             this.Controls.Add(this.btnDeployar);
             this.Controls.Add(this.btnCompilar);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "OpcionesForm";
             this.Text = "OpcionesForm";
             this.Load += new System.EventHandler(this.OpcionesForm_Load);
@@ -156,5 +194,7 @@
         private System.Windows.Forms.Label lblTitulo;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.CheckedListBox cLBPiezas;
+        private System.Windows.Forms.Button btnEliminarProyecto;
+        private System.Windows.Forms.Button btnEliminarServidor;
     }
 }
