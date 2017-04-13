@@ -143,21 +143,39 @@ namespace ProjectManager
                 {
                     if (app != null)
                     {
-                        files = Directory.GetFiles(app.Path, "*.war",SearchOption.AllDirectories);
+                        try
+                        {
+                            files = Directory.GetFiles(app.Path, "*.war", SearchOption.AllDirectories);
+                        
+                        }
+                        catch (DirectoryNotFoundException )
+                        {
+                            cmbProyectos.SelectedText = "";
+                            MessageBox.Show("No se encontro la ruta "+app.Path);
+                        }
                         
                     }
                 }
             }
             for (int i = 0; i < files.Count(); i++)
             {
-                
-                piezaADeployar = new PiezaADeployar();
-                DirectoryInfo dir = new DirectoryInfo(files[i]);
-                piezaADeployar.Ruta = dir.FullName;
-                piezaADeployar.Nombre = dir.Name;
-                piezasADeployar.Add(piezaADeployar);
-                cLBPiezas.Items.Add(piezaADeployar.Nombre);
-                
+                try
+                {
+                    piezaADeployar = new PiezaADeployar();
+                    DirectoryInfo dir = new DirectoryInfo(files[i]);
+                    piezaADeployar.Ruta = dir.FullName;
+                    piezaADeployar.Nombre = dir.Name;
+                    piezasADeployar.Add(piezaADeployar);
+                    cLBPiezas.Items.Add(piezaADeployar.Nombre);
+                    
+                }
+                catch (ArgumentNullException)
+                {
+                }
+            }
+            if (files.Count() == 0)
+            {
+                MessageBox.Show("No se encontraron artefactos");
             }
         }
 

@@ -1,0 +1,4 @@
+C:\Users\agustin.cantero\Desktop\ProjectManager\Entities\bin\Debug\Entities.dll
+C:\Users\agustin.cantero\Desktop\ProjectManager\Entities\bin\Debug\Entities.pdb
+C:\Users\agustin.cantero\Desktop\ProjectManager\Entities\obj\Debug\Entities.dll
+C:\Users\agustin.cantero\Desktop\ProjectManager\Entities\obj\Debug\Entities.pdb

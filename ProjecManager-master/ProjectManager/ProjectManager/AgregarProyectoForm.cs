@@ -14,7 +14,7 @@ namespace ProjectManager
 {
     public partial class AddAppForm : Form
     {
-        bool vacio = false; // Variable utilizada para saber si hay algún TextBox vacio.
+        
 
         public AddAppForm()
         {
@@ -99,6 +99,7 @@ namespace ProjectManager
 
         private bool validarCamposVacios(Form formulario)
         {
+            bool vacio = false; // Variable utilizada para saber si hay algún TextBox vacio.
             foreach (Control oControls in formulario.Controls) // Buscamos en cada TextBox de nuestro Formulario.
             {
                 if (oControls is TextBox & oControls.Text == String.Empty) // Verificamos que no este vacio.
