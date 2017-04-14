@@ -26,7 +26,7 @@ namespace ProjectManager
 
         }
 
-        private void btnAcceptAddApp_Click(object sender, EventArgs e)
+        private void btnGuardarServidor_Click(object sender, EventArgs e)
         {
             bool volver = this.validarCamposVacios(this);
             if (volver)
@@ -81,7 +81,6 @@ namespace ProjectManager
 
             if (guardadoConExito)
                 this.Close();
-
         }
 
         private void btnCancelAddApp_Click(object sender, EventArgs e)

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(OpcionesForm));
             this.btnCompilar = new System.Windows.Forms.Button();
             this.btnDeployar = new System.Windows.Forms.Button();
@@ -42,6 +43,10 @@
             this.btnEliminarServidor = new System.Windows.Forms.Button();
             this.btnAgregarServidor = new System.Windows.Forms.Button();
             this.btnAgregarProyecto = new System.Windows.Forms.Button();
+            this.tTAgregarProyecto = new System.Windows.Forms.ToolTip(this.components);
+            this.tTEliminarProyecto = new System.Windows.Forms.ToolTip(this.components);
+            this.tTAgregarServidor = new System.Windows.Forms.ToolTip(this.components);
+            this.tTEliminarServidor = new System.Windows.Forms.ToolTip(this.components);
             this.SuspendLayout();
             // 
             // btnCompilar
@@ -250,5 +255,9 @@
         private System.Windows.Forms.Button btnEliminarServidor;
         private System.Windows.Forms.Button btnAgregarServidor;
         private System.Windows.Forms.Button btnAgregarProyecto;
+        private System.Windows.Forms.ToolTip tTAgregarProyecto;
+        private System.Windows.Forms.ToolTip tTEliminarProyecto;
+        private System.Windows.Forms.ToolTip tTAgregarServidor;
+        private System.Windows.Forms.ToolTip tTEliminarServidor;
     }
 }

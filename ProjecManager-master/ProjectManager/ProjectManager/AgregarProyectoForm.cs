@@ -40,10 +40,12 @@ namespace ProjectManager
             string curFile = "../../../proyectos.xml";
             List<Apps> listApps = new List<Apps>();
             XmlSerialize<Apps> ser = new XmlSerialize<Apps>();
+
             if (File.Exists(curFile))
             {
                 listApps = ser.DesSerializarXML(listApps, curFile);
             }
+
             Apps app = new Apps();
             app.Name = txtNameAddApp.Text;
             app.Path = txtPathAddApp.Text;
@@ -67,7 +69,7 @@ namespace ProjectManager
                 }
                 else
                 {
-                    MessageBox.Show("No se puede agregar el proyecto, el nombre ya existe", "El Proyecto ya existe",
+                    MessageBox.Show("No se puede agregar el proyecto, ya existe un proyecto con ese nombre.", "El Proyecto ya existe",
                     MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
                 }
             }
@@ -80,7 +82,7 @@ namespace ProjectManager
             ser.SerializarXML(listApps, curFile);
 
             if(guardadoConExito)
-            this.Close();
+                this.Close();
         }
 
         private void btnCancelAddApp_Click(object sender, EventArgs e)

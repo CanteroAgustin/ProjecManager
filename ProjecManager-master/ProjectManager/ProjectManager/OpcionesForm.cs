@@ -49,7 +49,11 @@ namespace ProjectManager
 
         private void OpcionesForm_Load(object sender, EventArgs e)
         {
-            
+            this.tTAgregarProyecto.SetToolTip(this.btnAgregarProyecto, "Crea un nuevo proyecto.");
+            this.tTEliminarProyecto.SetToolTip(this.btnEliminarProyecto, "Elimina el proyecto seleccionado.");
+            this.tTAgregarServidor.SetToolTip(this.btnAgregarServidor, "Crea un nuevo servidor.");
+            this.tTEliminarServidor.SetToolTip(this.btnEliminarServidor, "Elimina el servidor seleccionado.");
+
             if (File.Exists(pathProyectos))
                 listApps = ser.DesSerializarXML(listApps, pathProyectos);
 
@@ -262,6 +266,7 @@ namespace ProjectManager
 
             if (listApps.Count > 0)
             {
+                cmbProyectos.Items.Clear();
                 foreach (Apps app in listApps)
                 {
                     cmbProyectos.Items.Add(app.Name);
@@ -276,6 +281,17 @@ namespace ProjectManager
             AddServerForm frm = new AddServerForm();
             this.Hide();
             frm.ShowDialog();
+            if (File.Exists(serverPath))
+                serversList = ser1.DesSerializarXML(serversList, serverPath);
+
+            if (serversList.Count > 0)
+            {
+                cmbServidores.Items.Clear();
+                foreach (Server servidor in serversList)
+                {
+                    cmbServidores.Items.Add(servidor.Name);
+                }
+            }
             this.Show();
 
         }

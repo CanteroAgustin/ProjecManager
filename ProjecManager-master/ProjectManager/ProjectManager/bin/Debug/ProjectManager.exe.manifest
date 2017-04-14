@@ -55,14 +55,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ProjectManager.exe" size="40960">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ProjectManager.exe" size="41984">
       <assemblyIdentity name="ProjectManager" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>HgAkt4y1XiaBTV5dHuaaZsz0pf+k2no6gmW3bNs+pHs=</dsig:DigestValue>
+        <dsig:DigestValue>23S7PahtUckr+n2QJ3tVlE+Cq+NK9Niamxc5KShlbFM=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

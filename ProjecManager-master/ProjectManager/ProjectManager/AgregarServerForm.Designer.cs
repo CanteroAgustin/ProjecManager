@@ -32,7 +32,7 @@
             this.txtPathAddApp = new System.Windows.Forms.TextBox();
             this.lblNameAddApp = new System.Windows.Forms.Label();
             this.lblPathAddApp = new System.Windows.Forms.Label();
-            this.btnAcceptAddApp = new System.Windows.Forms.Button();
+            this.btnGuardarServidor = new System.Windows.Forms.Button();
             this.btnCancelAddApp = new System.Windows.Forms.Button();
             this.btnAgregarRuta = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -69,15 +69,15 @@
             this.lblPathAddApp.TabIndex = 3;
             this.lblPathAddApp.Text = "Ruta";
             // 
-            // btnAcceptAddApp
+            // btnGuardarServidor
             // 
-            this.btnAcceptAddApp.Location = new System.Drawing.Point(12, 92);
-            this.btnAcceptAddApp.Name = "btnAcceptAddApp";
-            this.btnAcceptAddApp.Size = new System.Drawing.Size(129, 28);
-            this.btnAcceptAddApp.TabIndex = 4;
-            this.btnAcceptAddApp.Text = "Aceptar";
-            this.btnAcceptAddApp.UseVisualStyleBackColor = true;
-            this.btnAcceptAddApp.Click += new System.EventHandler(this.btnAcceptAddApp_Click);
+            this.btnGuardarServidor.Location = new System.Drawing.Point(12, 92);
+            this.btnGuardarServidor.Name = "btnGuardarServidor";
+            this.btnGuardarServidor.Size = new System.Drawing.Size(129, 28);
+            this.btnGuardarServidor.TabIndex = 4;
+            this.btnGuardarServidor.Text = "Aceptar";
+            this.btnGuardarServidor.UseVisualStyleBackColor = true;
+            this.btnGuardarServidor.Click += new System.EventHandler(this.btnGuardarServidor_Click);
             // 
             // btnCancelAddApp
             // 
@@ -107,7 +107,7 @@
             this.ClientSize = new System.Drawing.Size(451, 136);
             this.Controls.Add(this.btnAgregarRuta);
             this.Controls.Add(this.btnCancelAddApp);
-            this.Controls.Add(this.btnAcceptAddApp);
+            this.Controls.Add(this.btnGuardarServidor);
             this.Controls.Add(this.lblPathAddApp);
             this.Controls.Add(this.lblNameAddApp);
             this.Controls.Add(this.txtPathAddApp);
@@ -119,7 +119,7 @@
             this.Controls.SetChildIndex(this.txtPathAddApp, 0);
             this.Controls.SetChildIndex(this.lblNameAddApp, 0);
             this.Controls.SetChildIndex(this.lblPathAddApp, 0);
-            this.Controls.SetChildIndex(this.btnAcceptAddApp, 0);
+            this.Controls.SetChildIndex(this.btnGuardarServidor, 0);
             this.Controls.SetChildIndex(this.btnCancelAddApp, 0);
             this.Controls.SetChildIndex(this.btnAgregarRuta, 0);
             this.ResumeLayout(false);
@@ -133,7 +133,7 @@
         private System.Windows.Forms.TextBox txtPathAddApp;
         private System.Windows.Forms.Label lblNameAddApp;
         private System.Windows.Forms.Label lblPathAddApp;
-        private System.Windows.Forms.Button btnAcceptAddApp;
+        private System.Windows.Forms.Button btnGuardarServidor;
         private System.Windows.Forms.Button btnCancelAddApp;
         private System.Windows.Forms.Button btnAgregarRuta;
     }
