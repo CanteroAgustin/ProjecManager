@@ -13,7 +13,7 @@ using Exceptions;
 
 namespace ProjectManager
 {
-    public partial class OpcionesForm : Form
+    public partial class OpcionesForm : Form1
     {
         private List<Server> serversList = new List<Server>();
         private List<Apps> listApps = new List<Apps>();
@@ -24,6 +24,7 @@ namespace ProjectManager
         private List<PiezaADeployar> piezasADeployar = new List<PiezaADeployar>();
         private PiezaADeployar piezaADeployar;
         public bool vacio; // Variable utilizada para saber si hay algún TextBox vacio.
+        
 
         public OpcionesForm()
         {
@@ -146,12 +147,16 @@ namespace ProjectManager
                         try
                         {
                             files = Directory.GetFiles(app.Path, "*.war", SearchOption.AllDirectories);
-                        
+                        }
+                        catch (ArgumentException)
+                        {
+                            cmbProyectos.SelectedText = "";
+                            MessageBox.Show("La ruta: " + app.Path + ", posee caracteres invalidos");
                         }
                         catch (DirectoryNotFoundException )
                         {
                             cmbProyectos.SelectedText = "";
-                            MessageBox.Show("No se encontro la ruta "+app.Path);
+                            MessageBox.Show("No se encontro la ruta: "+app.Path);
                         }
                         
                     }
@@ -200,6 +205,9 @@ namespace ProjectManager
 
         private void btnEliminarProyecto_Click(object sender, EventArgs e)
         {
+            if (cmbProyectos.SelectedItem == null)
+                return;
+
             foreach(Apps p in listApps)
             {
                 if (p.Name.Equals(cmbProyectos.SelectedItem))
@@ -222,6 +230,9 @@ namespace ProjectManager
 
         private void btnEliminarServidor_Click(object sender, EventArgs e)
         {
+            if (cmbServidores.SelectedItem == null)
+                return;
+
             foreach (Server s in serversList)
             {
                 if (s.Name.Equals(cmbServidores.SelectedItem))
@@ -241,6 +252,36 @@ namespace ProjectManager
             }
         }
 
+        private void btnAgregarProyecto_Click(object sender, EventArgs e)
+        {
+            AddAppForm frm = new AddAppForm();
+            this.Hide();
+            frm.ShowDialog();
+            if (File.Exists(pathProyectos))
+                listApps = ser.DesSerializarXML(listApps, pathProyectos);
 
+            if (listApps.Count > 0)
+            {
+                foreach (Apps app in listApps)
+                {
+                    cmbProyectos.Items.Add(app.Name);
+                }
+            }
+            
+            this.Show();
+        }
+
+        private void btnAgregarServidor_Click(object sender, EventArgs e)
+        {
+            AddServerForm frm = new AddServerForm();
+            this.Hide();
+            frm.ShowDialog();
+            this.Show();
+
+        }
+
+        
+
+        
     }
 }

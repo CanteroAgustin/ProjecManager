@@ -13,94 +13,61 @@ namespace ProjectManager
 {
     public partial class Form1 : Form
     {
-        Point formPosition;
-        Boolean mouseAction;
+        private Point pos = Point.Empty;
+        private bool move = false;
         public Form1()
         {
             InitializeComponent();
         }
 
-        private void btnAddApp_Click(object sender, EventArgs e)
+        private void minimize_Click(object sender, EventArgs e)
         {
-            AddAppForm frm = new AddAppForm();
-            this.Hide();
-            frm.ShowDialog();
-            this.Show();
+            this.WindowState = FormWindowState.Minimized;
         }
 
-        
-
-        private void btnDeploy_Click(object sender, EventArgs e)
+        private void maximize_Click(object sender, EventArgs e)
         {
-            OpcionesForm frm = new OpcionesForm();
-            this.Hide();
-            frm.ShowDialog();
-            this.Show();
+            this.WindowState =
+        (this.WindowState == FormWindowState.Maximized ?
+            FormWindowState.Normal :
+            FormWindowState.Maximized);
         }
 
-        private void btnAddServer_Click(object sender, EventArgs e)
+        private void close_Click(object sender, EventArgs e)
         {
-            AddServerForm frm = new AddServerForm();
-            this.Hide();
-            frm.ShowDialog();
-            this.Show();
+            this.Close();
         }
 
-        private void btnShowServers_Click(object sender, EventArgs e)
+        private void title_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void btnShowApps_Click(object sender, EventArgs e)
+        private void title_MouseDown(object sender, MouseEventArgs e)
         {
-
+            pos = new Point(e.X, e.Y);
+            move = true;
+        }
+        private void title_MouseUp(object sender, MouseEventArgs e)
+        {
+            move = false;
+        }
+        private void title_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (move)
+                this.Location = new Point((this.Left + e.X - pos.X),
+                    (this.Top + e.Y - pos.Y));
         }
 
-        
-
-        private void dynamicbutton_Click(Object sender, System.EventArgs e)
+        public string Title
         {
-            
+            get { return title.Text; }
+            set { title.Text = value; }
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
 
         }
-
-        private void pBLogo_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnSalir_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
-        private void Form1_MouseUp(object sender, MouseEventArgs e)
-        {
-            mouseAction = false;
-        }
-
-        private void Form1_MouseMove(object sender, MouseEventArgs e)
-        {
-            if (mouseAction == true)
-            {
-                Location = new Point(Cursor.Position.X - formPosition.X, Cursor.Position.Y - formPosition.Y);
-            }
-        }
-        private void Form1_MouseDown(object sender, MouseEventArgs e)
-        {
-            formPosition = new Point(Cursor.Position.X - Location.X, Cursor.Position.Y - Location.Y);
-            mouseAction = true;
-        }
-
-        private void btnSalir_Click_1(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
-        
     }
 }

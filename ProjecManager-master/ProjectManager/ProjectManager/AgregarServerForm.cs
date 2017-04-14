@@ -12,7 +12,7 @@ using System.Windows.Forms;
 
 namespace ProjectManager
 {
-    public partial class AddServerForm : Form
+    public partial class AddServerForm : Form1
     {
 
         public AddServerForm()
@@ -92,7 +92,7 @@ namespace ProjectManager
 
         private void AddServerForm_Load_1(object sender, EventArgs e)
         {
-
+            Title = "Nuevo Servidor";
         }
 
         private void txtSources_TextChanged(object sender, EventArgs e)

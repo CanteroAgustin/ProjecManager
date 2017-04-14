@@ -12,19 +12,19 @@ using System.IO;
 
 namespace ProjectManager
 {
-    public partial class AddAppForm : Form
+    public partial class AddAppForm : Form1
     {
         
 
         public AddAppForm()
         {
             InitializeComponent();
-            Form1.ActiveForm.Hide();
+            //OpcionesForm.ActiveForm.Hide();
         }
 
         private void AddAppForm_Load(object sender, EventArgs e)
         {
-            
+            Title = "Nuevo Proyecto";
         }
 
         private void btnAcceptAddApp_Click(object sender, EventArgs e)

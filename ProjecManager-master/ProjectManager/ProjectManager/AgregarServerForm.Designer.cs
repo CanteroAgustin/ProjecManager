@@ -39,14 +39,14 @@
             // 
             // txtNameAddApp
             // 
-            this.txtNameAddApp.Location = new System.Drawing.Point(13, 13);
+            this.txtNameAddApp.Location = new System.Drawing.Point(12, 40);
             this.txtNameAddApp.Name = "txtNameAddApp";
             this.txtNameAddApp.Size = new System.Drawing.Size(129, 20);
             this.txtNameAddApp.TabIndex = 0;
             // 
             // txtPathAddApp
             // 
-            this.txtPathAddApp.Location = new System.Drawing.Point(13, 40);
+            this.txtPathAddApp.Location = new System.Drawing.Point(12, 66);
             this.txtPathAddApp.Name = "txtPathAddApp";
             this.txtPathAddApp.Size = new System.Drawing.Size(355, 20);
             this.txtPathAddApp.TabIndex = 1;
@@ -54,7 +54,7 @@
             // lblNameAddApp
             // 
             this.lblNameAddApp.AutoSize = true;
-            this.lblNameAddApp.Location = new System.Drawing.Point(145, 16);
+            this.lblNameAddApp.Location = new System.Drawing.Point(147, 43);
             this.lblNameAddApp.Name = "lblNameAddApp";
             this.lblNameAddApp.Size = new System.Drawing.Size(44, 13);
             this.lblNameAddApp.TabIndex = 2;
@@ -63,7 +63,7 @@
             // lblPathAddApp
             // 
             this.lblPathAddApp.AutoSize = true;
-            this.lblPathAddApp.Location = new System.Drawing.Point(407, 43);
+            this.lblPathAddApp.Location = new System.Drawing.Point(406, 69);
             this.lblPathAddApp.Name = "lblPathAddApp";
             this.lblPathAddApp.Size = new System.Drawing.Size(30, 13);
             this.lblPathAddApp.TabIndex = 3;
@@ -71,9 +71,9 @@
             // 
             // btnAcceptAddApp
             // 
-            this.btnAcceptAddApp.Location = new System.Drawing.Point(13, 66);
+            this.btnAcceptAddApp.Location = new System.Drawing.Point(12, 92);
             this.btnAcceptAddApp.Name = "btnAcceptAddApp";
-            this.btnAcceptAddApp.Size = new System.Drawing.Size(129, 38);
+            this.btnAcceptAddApp.Size = new System.Drawing.Size(129, 28);
             this.btnAcceptAddApp.TabIndex = 4;
             this.btnAcceptAddApp.Text = "Aceptar";
             this.btnAcceptAddApp.UseVisualStyleBackColor = true;
@@ -81,9 +81,9 @@
             // 
             // btnCancelAddApp
             // 
-            this.btnCancelAddApp.Location = new System.Drawing.Point(148, 66);
+            this.btnCancelAddApp.Location = new System.Drawing.Point(147, 92);
             this.btnCancelAddApp.Name = "btnCancelAddApp";
-            this.btnCancelAddApp.Size = new System.Drawing.Size(124, 38);
+            this.btnCancelAddApp.Size = new System.Drawing.Size(124, 28);
             this.btnCancelAddApp.TabIndex = 5;
             this.btnCancelAddApp.Text = "Cancelar";
             this.btnCancelAddApp.UseVisualStyleBackColor = true;
@@ -92,7 +92,7 @@
             // btnAgregarRuta
             // 
             this.btnAgregarRuta.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAgregarRuta.Location = new System.Drawing.Point(374, 40);
+            this.btnAgregarRuta.Location = new System.Drawing.Point(373, 66);
             this.btnAgregarRuta.Name = "btnAgregarRuta";
             this.btnAgregarRuta.Size = new System.Drawing.Size(27, 21);
             this.btnAgregarRuta.TabIndex = 11;
@@ -104,7 +104,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(444, 115);
+            this.ClientSize = new System.Drawing.Size(451, 136);
             this.Controls.Add(this.btnAgregarRuta);
             this.Controls.Add(this.btnCancelAddApp);
             this.Controls.Add(this.btnAcceptAddApp);
@@ -115,6 +115,13 @@
             this.Name = "AddServerForm";
             this.Text = "Nuevo Servidor";
             this.Load += new System.EventHandler(this.AddServerForm_Load_1);
+            this.Controls.SetChildIndex(this.txtNameAddApp, 0);
+            this.Controls.SetChildIndex(this.txtPathAddApp, 0);
+            this.Controls.SetChildIndex(this.lblNameAddApp, 0);
+            this.Controls.SetChildIndex(this.lblPathAddApp, 0);
+            this.Controls.SetChildIndex(this.btnAcceptAddApp, 0);
+            this.Controls.SetChildIndex(this.btnCancelAddApp, 0);
+            this.Controls.SetChildIndex(this.btnAgregarRuta, 0);
             this.ResumeLayout(false);
             this.PerformLayout();
 
