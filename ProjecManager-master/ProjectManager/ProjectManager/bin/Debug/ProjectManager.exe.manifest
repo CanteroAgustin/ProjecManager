@@ -50,19 +50,19 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>Drr2GmFgmV6IVIjTGi00J+Pwkz0buYZf54c+PD5JI6k=</dsig:DigestValue>
+        <dsig:DigestValue>GxPEPS/GW9AVKb2dTDnK8VJljqzd0XKa5ZmuecoByqg=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ProjectManager.exe" size="41984">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ProjectManager.exe" size="51200">
       <assemblyIdentity name="ProjectManager" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>23S7PahtUckr+n2QJ3tVlE+Cq+NK9Niamxc5KShlbFM=</dsig:DigestValue>
+        <dsig:DigestValue>zsE1wQ/XaipGKEpz1OendIor6cL08OCRns7dUK1KiUQ=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

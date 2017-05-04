@@ -16,3 +16,5 @@ C:\Users\agustin.cantero\Desktop\ProjectManager\ProjectManager\obj\Debug\Project
 C:\Users\agustin.cantero\Desktop\ProjectManager\ProjectManager\obj\Debug\ProjectManager.application
 C:\Users\agustin.cantero\Desktop\ProjectManager\ProjectManager\obj\Debug\ProjectManager.exe
 C:\Users\agustin.cantero\Desktop\ProjectManager\ProjectManager\obj\Debug\ProjectManager.pdb
+C:\Users\agustin.cantero\Desktop\ProjectManager\ProjectManager\obj\Debug\ProjectManager.EditarProyectoForm.resources
+C:\Users\agustin.cantero\Desktop\ProjectManager\ProjectManager\obj\Debug\ProjectManager.EditarServidorForm.resources

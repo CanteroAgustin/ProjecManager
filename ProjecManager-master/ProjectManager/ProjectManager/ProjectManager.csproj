@@ -93,6 +93,18 @@
     <Compile Include="AgregarServerForm.Designer.cs">
       <DependentUpon>AgregarServerForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="EditarProyectoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditarProyectoForm.Designer.cs">
+      <DependentUpon>EditarProyectoForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditarServidorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditarServidorForm.Designer.cs">
+      <DependentUpon>EditarServidorForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="OpcionesForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -112,6 +124,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AgregarServerForm.resx">
       <DependentUpon>AgregarServerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditarProyectoForm.resx">
+      <DependentUpon>EditarProyectoForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditarServidorForm.resx">
+      <DependentUpon>EditarServidorForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="OpcionesForm.resx">
       <DependentUpon>OpcionesForm.cs</DependentUpon>

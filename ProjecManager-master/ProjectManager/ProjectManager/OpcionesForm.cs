@@ -229,7 +229,7 @@ namespace ProjectManager
                     cmbProyectos.Items.Add(app.Name);
                 }
             }
-            
+            cLBPiezas.Items.Clear();
         }
 
         private void btnEliminarServidor_Click(object sender, EventArgs e)
@@ -254,6 +254,7 @@ namespace ProjectManager
                     cmbServidores.Items.Add(s.Name);
                 }
             }
+            cLBPiezas.Items.Clear();
         }
 
         private void btnAgregarProyecto_Click(object sender, EventArgs e)
@@ -272,7 +273,7 @@ namespace ProjectManager
                     cmbProyectos.Items.Add(app.Name);
                 }
             }
-            
+            cLBPiezas.Items.Clear();
             this.Show();
         }
 
@@ -292,10 +293,51 @@ namespace ProjectManager
                     cmbServidores.Items.Add(servidor.Name);
                 }
             }
+            cLBPiezas.Items.Clear();
             this.Show();
-
         }
 
+        private void btnEditarProyecto_Click(object sender, EventArgs e)
+        {
+            EditarProyectoForm frm = new EditarProyectoForm();
+            this.Hide();
+            frm.ShowDialog();
+
+            if (File.Exists(pathProyectos))
+                listApps = ser.DesSerializarXML(listApps, pathProyectos);
+
+            if (listApps.Count > 0)
+            {
+                cmbProyectos.Items.Clear();
+                foreach (Apps app in listApps)
+                {
+                    cmbProyectos.Items.Add(app.Name);
+                }
+            }
+            cLBPiezas.Items.Clear();
+            this.Show();
+        }
+
+        private void btnEditarServidor_Click(object sender, EventArgs e)
+        {
+            EditarServidorForm frm = new EditarServidorForm();
+            this.Hide();
+            frm.ShowDialog();
+
+            if (File.Exists(serverPath))
+                serversList = ser1.DesSerializarXML(serversList, serverPath);
+
+            if (serversList.Count > 0)
+            {
+                cmbServidores.Items.Clear();
+                foreach (Server servidor in serversList)
+                {
+                    cmbServidores.Items.Add(servidor.Name);
+                }
+            }
+            cLBPiezas.Items.Clear();
+            this.Show();
+        }
         
 
         
