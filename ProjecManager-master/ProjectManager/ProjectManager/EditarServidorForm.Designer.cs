@@ -78,7 +78,6 @@
             this.label3.Size = new System.Drawing.Size(165, 13);
             this.label3.TabIndex = 45;
             this.label3.Text = "Seleccione el servidor a modificar";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label2
             // 
@@ -119,6 +118,7 @@
             this.cmbServidoresAEditar.Name = "cmbServidoresAEditar";
             this.cmbServidoresAEditar.Size = new System.Drawing.Size(160, 21);
             this.cmbServidoresAEditar.TabIndex = 40;
+            this.cmbServidoresAEditar.SelectedIndexChanged += new System.EventHandler(this.cmbServidoresAEditar_SelectedIndexChanged);
             // 
             // EditarServidorForm
             // 

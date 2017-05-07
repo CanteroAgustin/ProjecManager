@@ -46,6 +46,7 @@
             this.cmbProyectosAEditar.Name = "cmbProyectosAEditar";
             this.cmbProyectosAEditar.Size = new System.Drawing.Size(160, 21);
             this.cmbProyectosAEditar.TabIndex = 31;
+            this.cmbProyectosAEditar.SelectedIndexChanged += new System.EventHandler(this.cmbProyectosAEditar_SelectedIndexChanged);
             // 
             // txtNuevoNombre
             // 
@@ -119,7 +120,7 @@
             this.btnAcceptAddApp.UseVisualStyleBackColor = true;
             this.btnAcceptAddApp.Click += new System.EventHandler(this.btnEditarProyecto_Click);
             // 
-            // EditarProyecto
+            // EditarProyectoForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -133,7 +134,7 @@
             this.Controls.Add(this.txtNuevaRuta);
             this.Controls.Add(this.txtNuevoNombre);
             this.Controls.Add(this.cmbProyectosAEditar);
-            this.Name = "EditarProyecto";
+            this.Name = "EditarProyectoForm";
             this.Text = "EditarProyecto";
             this.Load += new System.EventHandler(this.EditarProyecto_Load);
             this.Controls.SetChildIndex(this.cmbProyectosAEditar, 0);

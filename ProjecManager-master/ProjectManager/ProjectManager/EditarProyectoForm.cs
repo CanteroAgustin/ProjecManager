@@ -69,5 +69,18 @@ namespace ProjectManager
             }
             this.Close();
         }
+
+        private void cmbProyectosAEditar_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            foreach (Apps p in proyectosList)
+            {
+                if (p.Name.Equals(cmbProyectosAEditar.SelectedItem))
+                {
+                    txtNuevoNombre.Text = p.Name;
+                    txtNuevaRuta.Text = p.Path;
+                    break;
+                }
+            }
+        }
     }
 }

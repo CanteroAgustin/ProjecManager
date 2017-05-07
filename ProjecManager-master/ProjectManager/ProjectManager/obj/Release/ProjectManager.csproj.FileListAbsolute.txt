@@ -16,3 +16,5 @@ C:\Users\agustin.cantero\Desktop\ProjectManager\ProjectManager\obj\Release\Proje
 C:\Users\agustin.cantero\Desktop\ProjectManager\ProjectManager\obj\Release\ProjectManager.application
 C:\Users\agustin.cantero\Desktop\ProjectManager\ProjectManager\obj\Release\ProjectManager.exe
 C:\Users\agustin.cantero\Desktop\ProjectManager\ProjectManager\obj\Release\ProjectManager.pdb
+C:\Users\agustin.cantero\Desktop\ProjectManager\ProjectManager\obj\Release\ProjectManager.EditarProyectoForm.resources
+C:\Users\agustin.cantero\Desktop\ProjectManager\ProjectManager\obj\Release\ProjectManager.EditarServidorForm.resources

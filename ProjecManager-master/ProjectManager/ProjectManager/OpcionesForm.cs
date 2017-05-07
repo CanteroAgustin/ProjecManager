@@ -53,6 +53,10 @@ namespace ProjectManager
             this.tTEliminarProyecto.SetToolTip(this.btnEliminarProyecto, "Elimina el proyecto seleccionado.");
             this.tTAgregarServidor.SetToolTip(this.btnAgregarServidor, "Crea un nuevo servidor.");
             this.tTEliminarServidor.SetToolTip(this.btnEliminarServidor, "Elimina el servidor seleccionado.");
+            this.tTCompilar.SetToolTip(this.btnCompilar, "Compila el Proyecto seleccionado.");
+            this.tTDesplegar.SetToolTip(this.btnDeployar, "Despliega las piezas seleccionadas.");
+            this.tTEditarProyecto.SetToolTip(this.btnEditarProyecto, "Editar Proyectos.");
+            this.tTEditarServidor.SetToolTip(this.btnEditarServidor, "Editar Servidores.");
 
             if (File.Exists(pathProyectos))
                 listApps = ser.DesSerializarXML(listApps, pathProyectos);

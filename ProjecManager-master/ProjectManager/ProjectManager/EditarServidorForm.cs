@@ -71,9 +71,18 @@ namespace ProjectManager
                 txtNuevaRuta.Text = fbd.SelectedPath;
         }
 
-        private void label3_Click(object sender, EventArgs e)
+        private void cmbServidoresAEditar_SelectedIndexChanged(object sender, EventArgs e)
         {
+            foreach (Server s in servidoresList)
+            {
+                if (s.Name.Equals(cmbServidoresAEditar.SelectedItem))
+                {
+                    txtNuevoNombre.Text = s.Name;
+                    txtNuevaRuta.Text = s.Path;
 
+                    break;
+                }
+            }
         }
     }
 }

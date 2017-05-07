@@ -50,27 +50,36 @@
             this.btnAgregarServidor = new System.Windows.Forms.Button();
             this.btnEditarServidor = new System.Windows.Forms.Button();
             this.btnEliminarServidor = new System.Windows.Forms.Button();
+            this.tTCompilar = new System.Windows.Forms.ToolTip(this.components);
+            this.tTDesplegar = new System.Windows.Forms.ToolTip(this.components);
+            this.tTEditarProyecto = new System.Windows.Forms.ToolTip(this.components);
+            this.tTEditarServidor = new System.Windows.Forms.ToolTip(this.components);
             this.panelBotonesProyecto.SuspendLayout();
             this.panelBotonesServidor.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnCompilar
             // 
-            this.btnCompilar.Location = new System.Drawing.Point(16, 362);
+            this.btnCompilar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnCompilar.BackgroundImage")));
+            this.btnCompilar.FlatAppearance.BorderSize = 0;
+            this.btnCompilar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCompilar.Location = new System.Drawing.Point(286, 51);
             this.btnCompilar.Name = "btnCompilar";
-            this.btnCompilar.Size = new System.Drawing.Size(139, 43);
+            this.btnCompilar.Size = new System.Drawing.Size(41, 41);
             this.btnCompilar.TabIndex = 0;
-            this.btnCompilar.Text = "Compilar";
             this.btnCompilar.UseVisualStyleBackColor = true;
             this.btnCompilar.Click += new System.EventHandler(this.btnCompilar_Click);
             // 
             // btnDeployar
             // 
-            this.btnDeployar.Location = new System.Drawing.Point(158, 362);
+            this.btnDeployar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnDeployar.BackgroundImage")));
+            this.btnDeployar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnDeployar.FlatAppearance.BorderSize = 0;
+            this.btnDeployar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDeployar.Location = new System.Drawing.Point(287, 113);
             this.btnDeployar.Name = "btnDeployar";
-            this.btnDeployar.Size = new System.Drawing.Size(139, 43);
+            this.btnDeployar.Size = new System.Drawing.Size(39, 38);
             this.btnDeployar.TabIndex = 1;
-            this.btnDeployar.Text = "Deployar";
             this.btnDeployar.UseVisualStyleBackColor = true;
             this.btnDeployar.Click += new System.EventHandler(this.btnDeployar_Click);
             // 
@@ -118,9 +127,9 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(16, 169);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(161, 13);
+            this.label3.Size = new System.Drawing.Size(167, 13);
             this.label3.TabIndex = 7;
-            this.label3.Text = "Seleccione las piezas a deployar";
+            this.label3.Text = "Seleccione las piezas a desplegar";
             // 
             // cLBPiezas
             // 
@@ -129,7 +138,7 @@
             this.cLBPiezas.FormattingEnabled = true;
             this.cLBPiezas.Location = new System.Drawing.Point(16, 194);
             this.cLBPiezas.Name = "cLBPiezas";
-            this.cLBPiezas.Size = new System.Drawing.Size(281, 152);
+            this.cLBPiezas.Size = new System.Drawing.Size(310, 152);
             this.cLBPiezas.TabIndex = 10;
             // 
             // btnEliminarProyecto
@@ -254,7 +263,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(309, 419);
+            this.ClientSize = new System.Drawing.Size(338, 365);
             this.ControlBox = false;
             this.Controls.Add(this.panelBotonesServidor);
             this.Controls.Add(this.panelBotonesProyecto);
@@ -309,5 +318,9 @@
         private System.Windows.Forms.Button btnAgregarServidor;
         private System.Windows.Forms.Button btnEditarServidor;
         private System.Windows.Forms.Button btnEliminarServidor;
+        private System.Windows.Forms.ToolTip tTCompilar;
+        private System.Windows.Forms.ToolTip tTDesplegar;
+        private System.Windows.Forms.ToolTip tTEditarProyecto;
+        private System.Windows.Forms.ToolTip tTEditarServidor;
     }
 }
