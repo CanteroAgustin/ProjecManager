@@ -10,6 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Exceptions;
+using System.Threading;
 
 namespace ProjectManager
 {
@@ -25,7 +26,6 @@ namespace ProjectManager
         private PiezaADeployar piezaADeployar;
         public bool vacio; // Variable utilizada para saber si hay algún TextBox vacio.
         
-
         public OpcionesForm()
         {
             
@@ -41,12 +41,18 @@ namespace ProjectManager
                 {
                     if (app.Name.Equals(cmbProyectos.SelectedItem))
                     {
-                        Compilador.Compilar(app.Path);
+                        Thread newThread = new Thread(Compilador.Compilar);
+                        newThread.Start(app.Path);
+                        while (newThread.IsAlive);
                     }
                 }
             }
         }
 
+        public void habilitarBoton()
+        {
+            this.btnCompilar.Enabled = true;
+        }
         private void OpcionesForm_Load(object sender, EventArgs e)
         {
             this.tTAgregarProyecto.SetToolTip(this.btnAgregarProyecto, "Crea un nuevo proyecto.");

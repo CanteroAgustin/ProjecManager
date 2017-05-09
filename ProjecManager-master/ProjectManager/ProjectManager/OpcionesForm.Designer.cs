@@ -63,7 +63,7 @@
             this.btnCompilar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnCompilar.BackgroundImage")));
             this.btnCompilar.FlatAppearance.BorderSize = 0;
             this.btnCompilar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCompilar.Location = new System.Drawing.Point(286, 51);
+            this.btnCompilar.Location = new System.Drawing.Point(273, 51);
             this.btnCompilar.Name = "btnCompilar";
             this.btnCompilar.Size = new System.Drawing.Size(41, 41);
             this.btnCompilar.TabIndex = 0;
@@ -76,9 +76,9 @@
             this.btnDeployar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnDeployar.FlatAppearance.BorderSize = 0;
             this.btnDeployar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDeployar.Location = new System.Drawing.Point(287, 113);
+            this.btnDeployar.Location = new System.Drawing.Point(273, 113);
             this.btnDeployar.Name = "btnDeployar";
-            this.btnDeployar.Size = new System.Drawing.Size(39, 38);
+            this.btnDeployar.Size = new System.Drawing.Size(41, 41);
             this.btnDeployar.TabIndex = 1;
             this.btnDeployar.UseVisualStyleBackColor = true;
             this.btnDeployar.Click += new System.EventHandler(this.btnDeployar_Click);
@@ -138,7 +138,7 @@
             this.cLBPiezas.FormattingEnabled = true;
             this.cLBPiezas.Location = new System.Drawing.Point(16, 194);
             this.cLBPiezas.Name = "cLBPiezas";
-            this.cLBPiezas.Size = new System.Drawing.Size(310, 152);
+            this.cLBPiezas.Size = new System.Drawing.Size(298, 152);
             this.cLBPiezas.TabIndex = 10;
             // 
             // btnEliminarProyecto
@@ -263,7 +263,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(338, 365);
+            this.ClientSize = new System.Drawing.Size(329, 365);
             this.ControlBox = false;
             this.Controls.Add(this.panelBotonesServidor);
             this.Controls.Add(this.panelBotonesProyecto);
