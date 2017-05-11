@@ -25,13 +25,15 @@ namespace ProjectManager
         private List<PiezaADeployar> piezasADeployar = new List<PiezaADeployar>();
         private PiezaADeployar piezaADeployar;
         public bool vacio; // Variable utilizada para saber si hay algún TextBox vacio.
-        
+        delegate void SetEnabledButtonCallback(bool flag);
+
         public OpcionesForm()
         {
             
             InitializeComponent();
         }
 
+        
         private void btnCompilar_Click(object sender, EventArgs e)
         {
             this.validar(this);
@@ -41,11 +43,31 @@ namespace ProjectManager
                 {
                     if (app.Name.Equals(cmbProyectos.SelectedItem))
                     {
-                        Thread newThread = new Thread(Compilador.Compilar);
+                        btnCompilar.Enabled = false;
+                        Thread newThread = new Thread(invocarCompilador);
                         newThread.Start(app.Path);
-                        while (newThread.IsAlive);
                     }
                 }
+                
+            }
+        }
+
+        private void invocarCompilador(object path)
+        {
+            Compilador.Compilar(path);
+            EnabledButton(true);
+        }
+
+        private void EnabledButton(bool flag)
+        {
+            if (this.btnCompilar.InvokeRequired)
+            {
+                SetEnabledButtonCallback d = new SetEnabledButtonCallback(EnabledButton);
+                this.Invoke(d, new object[] { flag });
+            }
+            else
+            {
+                this.btnCompilar.Enabled = true;
             }
         }
 

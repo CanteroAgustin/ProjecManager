@@ -17,15 +17,15 @@ namespace Entities
             process.StartInfo.WorkingDirectory = (String)data;
             process.StartInfo.Arguments = "/c mvn clean install -DskipTests";
             process.EnableRaisingEvents = true;
-            //process.Exited += new EventHandler(myProcess_Exited);
+            //process.Exited += manejador;
             process.Start();
             process.WaitForExit();
+            while (!process.HasExited);
+
         }
 
-        private static void myProcess_Exited(object sender, System.EventArgs e)
-        {
-            
-        }
+        
+
 
     }
 }
