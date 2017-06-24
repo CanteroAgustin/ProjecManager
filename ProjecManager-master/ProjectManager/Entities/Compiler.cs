@@ -10,12 +10,15 @@ namespace Entities
 {
     public class Compilador
     {
-        public static void Compilar(object data)
+        public static void Compilar(object data, bool check)
         {
             Process process = new Process();
             process.StartInfo.FileName = "cmd.exe";
             process.StartInfo.WorkingDirectory = (String)data;
-            process.StartInfo.Arguments = "/c mvn clean install -DskipTests";
+            if(check == true)
+                process.StartInfo.Arguments = "/K mvn clean install -DskipTests";
+            else
+                process.StartInfo.Arguments = "/c mvn clean install -DskipTests";
             process.EnableRaisingEvents = true;
             //process.Exited += manejador;
             process.Start();

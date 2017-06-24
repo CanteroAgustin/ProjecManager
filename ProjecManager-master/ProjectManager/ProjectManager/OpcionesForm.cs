@@ -43,9 +43,11 @@ namespace ProjectManager
                 {
                     if (app.Name.Equals(cmbProyectos.SelectedItem))
                     {
+                        
                         btnCompilar.Enabled = false;
                         Thread newThread = new Thread(invocarCompilador);
                         newThread.Start(app.Path);
+                        cLBPiezas.Items.Clear();
                     }
                 }
                 
@@ -54,7 +56,8 @@ namespace ProjectManager
 
         private void invocarCompilador(object path)
         {
-            Compilador.Compilar(path);
+
+            Compilador.Compilar(path, checkConsola.Checked);
             EnabledButton(true);
         }
 
@@ -85,28 +88,10 @@ namespace ProjectManager
             this.tTDesplegar.SetToolTip(this.btnDeployar, "Despliega las piezas seleccionadas.");
             this.tTEditarProyecto.SetToolTip(this.btnEditarProyecto, "Editar Proyectos.");
             this.tTEditarServidor.SetToolTip(this.btnEditarServidor, "Editar Servidores.");
+            this.tTcheckConsola.SetToolTip(this.checkConsola, "Mantener abierta la consola al finalizar.");
 
-            if (File.Exists(pathProyectos))
-                listApps = ser.DesSerializarXML(listApps, pathProyectos);
-
-            if (File.Exists(serverPath))
-                serversList = ser1.DesSerializarXML(serversList, serverPath);
-
-            if (listApps.Count > 0)
-            {
-                foreach (Apps app in listApps)
-                {
-                    cmbProyectos.Items.Add(app.Name);
-                }
-            }
-            if (serversList.Count > 0)
-            {
-                foreach (Server server in serversList)
-                {
-                    cmbServidores.Items.Add(server.Name);
-                }
-            }
-
+            cargarComboBox(cmbProyectos);
+            cargarComboBox(cmbServidores);
         }
 
         private void btnDeployar_Click(object sender, EventArgs e)
@@ -159,15 +144,6 @@ namespace ProjectManager
             }
         }
 
-        private void btnPiezas_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void cmbServidores_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            
-        }
 
         private void cmbProyectos_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -219,12 +195,6 @@ namespace ProjectManager
                 MessageBox.Show("No se encontraron artefactos");
             }
         }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
         
         private void validar(Form formulario)
         {
@@ -294,17 +264,9 @@ namespace ProjectManager
             AddAppForm frm = new AddAppForm();
             this.Hide();
             frm.ShowDialog();
-            if (File.Exists(pathProyectos))
-                listApps = ser.DesSerializarXML(listApps, pathProyectos);
 
-            if (listApps.Count > 0)
-            {
-                cmbProyectos.Items.Clear();
-                foreach (Apps app in listApps)
-                {
-                    cmbProyectos.Items.Add(app.Name);
-                }
-            }
+            this.cargarComboBox(cmbProyectos);
+
             cLBPiezas.Items.Clear();
             this.Show();
         }
@@ -314,17 +276,9 @@ namespace ProjectManager
             AddServerForm frm = new AddServerForm();
             this.Hide();
             frm.ShowDialog();
-            if (File.Exists(serverPath))
-                serversList = ser1.DesSerializarXML(serversList, serverPath);
 
-            if (serversList.Count > 0)
-            {
-                cmbServidores.Items.Clear();
-                foreach (Server servidor in serversList)
-                {
-                    cmbServidores.Items.Add(servidor.Name);
-                }
-            }
+            this.cargarComboBox(cmbServidores);
+
             cLBPiezas.Items.Clear();
             this.Show();
         }
@@ -335,17 +289,8 @@ namespace ProjectManager
             this.Hide();
             frm.ShowDialog();
 
-            if (File.Exists(pathProyectos))
-                listApps = ser.DesSerializarXML(listApps, pathProyectos);
+            this.cargarComboBox(cmbProyectos);
 
-            if (listApps.Count > 0)
-            {
-                cmbProyectos.Items.Clear();
-                foreach (Apps app in listApps)
-                {
-                    cmbProyectos.Items.Add(app.Name);
-                }
-            }
             cLBPiezas.Items.Clear();
             this.Show();
         }
@@ -356,22 +301,44 @@ namespace ProjectManager
             this.Hide();
             frm.ShowDialog();
 
-            if (File.Exists(serverPath))
-                serversList = ser1.DesSerializarXML(serversList, serverPath);
+            this.cargarComboBox(cmbServidores);
 
-            if (serversList.Count > 0)
-            {
-                cmbServidores.Items.Clear();
-                foreach (Server servidor in serversList)
-                {
-                    cmbServidores.Items.Add(servidor.Name);
-                }
-            }
             cLBPiezas.Items.Clear();
             this.Show();
         }
-        
 
+        public void cargarComboBox(ComboBox c)
+        {
+            if (c.Name.Equals("cmbProyectos"))
+            {
+                if (File.Exists(pathProyectos))
+                    listApps = ser.DesSerializarXML(listApps, pathProyectos);
+                if (listApps.Count > 0)
+                {
+                    cmbProyectos.Items.Clear();
+                    foreach (Apps app in listApps)
+                    {
+                        cmbProyectos.Items.Add(app.Name);
+                    }
+                }
+            }
+
+            if (c.Name.Equals("cmbServidores"))
+            {
+                if (File.Exists(serverPath))
+                    serversList = ser1.DesSerializarXML(serversList, serverPath);
+
+
+                if (serversList.Count > 0)
+                {
+                    cmbServidores.Items.Clear();
+                    foreach (Server server in serversList)
+                    {
+                        cmbServidores.Items.Add(server.Name);
+                    }
+                }
+            }
+        }
         
     }
 }

@@ -54,6 +54,8 @@
             this.tTDesplegar = new System.Windows.Forms.ToolTip(this.components);
             this.tTEditarProyecto = new System.Windows.Forms.ToolTip(this.components);
             this.tTEditarServidor = new System.Windows.Forms.ToolTip(this.components);
+            this.checkConsola = new System.Windows.Forms.CheckBox();
+            this.tTcheckConsola = new System.Windows.Forms.ToolTip(this.components);
             this.panelBotonesProyecto.SuspendLayout();
             this.panelBotonesServidor.SuspendLayout();
             this.SuspendLayout();
@@ -63,9 +65,10 @@
             this.btnCompilar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnCompilar.BackgroundImage")));
             this.btnCompilar.FlatAppearance.BorderSize = 0;
             this.btnCompilar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCompilar.Location = new System.Drawing.Point(273, 51);
+            this.btnCompilar.Location = new System.Drawing.Point(439, 77);
+            this.btnCompilar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnCompilar.Name = "btnCompilar";
-            this.btnCompilar.Size = new System.Drawing.Size(41, 41);
+            this.btnCompilar.Size = new System.Drawing.Size(62, 63);
             this.btnCompilar.TabIndex = 0;
             this.btnCompilar.UseVisualStyleBackColor = true;
             this.btnCompilar.Click += new System.EventHandler(this.btnCompilar_Click);
@@ -76,9 +79,10 @@
             this.btnDeployar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnDeployar.FlatAppearance.BorderSize = 0;
             this.btnDeployar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDeployar.Location = new System.Drawing.Point(273, 113);
+            this.btnDeployar.Location = new System.Drawing.Point(439, 173);
+            this.btnDeployar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnDeployar.Name = "btnDeployar";
-            this.btnDeployar.Size = new System.Drawing.Size(41, 41);
+            this.btnDeployar.Size = new System.Drawing.Size(62, 63);
             this.btnDeployar.TabIndex = 1;
             this.btnDeployar.UseVisualStyleBackColor = true;
             this.btnDeployar.Click += new System.EventHandler(this.btnDeployar_Click);
@@ -87,27 +91,29 @@
             // 
             this.cmbServidores.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbServidores.FormattingEnabled = true;
-            this.cmbServidores.Location = new System.Drawing.Point(16, 124);
+            this.cmbServidores.Location = new System.Drawing.Point(24, 191);
+            this.cmbServidores.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cmbServidores.Name = "cmbServidores";
-            this.cmbServidores.Size = new System.Drawing.Size(178, 21);
+            this.cmbServidores.Size = new System.Drawing.Size(265, 28);
             this.cmbServidores.TabIndex = 2;
-            this.cmbServidores.SelectedIndexChanged += new System.EventHandler(this.cmbServidores_SelectedIndexChanged);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(16, 105);
+            this.label1.Location = new System.Drawing.Point(24, 162);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(111, 13);
+            this.label1.Size = new System.Drawing.Size(162, 20);
             this.label1.TabIndex = 3;
             this.label1.Text = "Seleccione el servidor";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(16, 40);
+            this.label2.Location = new System.Drawing.Point(24, 62);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(115, 13);
+            this.label2.Size = new System.Drawing.Size(168, 20);
             this.label2.TabIndex = 5;
             this.label2.Text = "Seleccione el proyecto";
             // 
@@ -115,9 +121,10 @@
             // 
             this.cmbProyectos.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbProyectos.FormattingEnabled = true;
-            this.cmbProyectos.Location = new System.Drawing.Point(16, 62);
+            this.cmbProyectos.Location = new System.Drawing.Point(24, 95);
+            this.cmbProyectos.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cmbProyectos.Name = "cmbProyectos";
-            this.cmbProyectos.Size = new System.Drawing.Size(178, 21);
+            this.cmbProyectos.Size = new System.Drawing.Size(265, 28);
             this.cmbProyectos.Sorted = true;
             this.cmbProyectos.TabIndex = 4;
             this.cmbProyectos.SelectedIndexChanged += new System.EventHandler(this.cmbProyectos_SelectedIndexChanged);
@@ -125,9 +132,10 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(16, 169);
+            this.label3.Location = new System.Drawing.Point(24, 260);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(167, 13);
+            this.label3.Size = new System.Drawing.Size(248, 20);
             this.label3.TabIndex = 7;
             this.label3.Text = "Seleccione las piezas a desplegar";
             // 
@@ -136,9 +144,10 @@
             this.cLBPiezas.BackColor = System.Drawing.SystemColors.Control;
             this.cLBPiezas.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.cLBPiezas.FormattingEnabled = true;
-            this.cLBPiezas.Location = new System.Drawing.Point(16, 194);
+            this.cLBPiezas.Location = new System.Drawing.Point(24, 298);
+            this.cLBPiezas.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cLBPiezas.Name = "cLBPiezas";
-            this.cLBPiezas.Size = new System.Drawing.Size(298, 152);
+            this.cLBPiezas.Size = new System.Drawing.Size(446, 233);
             this.cLBPiezas.TabIndex = 10;
             // 
             // btnEliminarProyecto
@@ -149,9 +158,10 @@
             this.btnEliminarProyecto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEliminarProyecto.Font = new System.Drawing.Font("Gill Sans Ultra Bold Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEliminarProyecto.ForeColor = System.Drawing.Color.Red;
-            this.btnEliminarProyecto.Location = new System.Drawing.Point(43, -6);
+            this.btnEliminarProyecto.Location = new System.Drawing.Point(64, -9);
+            this.btnEliminarProyecto.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnEliminarProyecto.Name = "btnEliminarProyecto";
-            this.btnEliminarProyecto.Size = new System.Drawing.Size(21, 26);
+            this.btnEliminarProyecto.Size = new System.Drawing.Size(32, 40);
             this.btnEliminarProyecto.TabIndex = 11;
             this.btnEliminarProyecto.Text = "x";
             this.btnEliminarProyecto.UseVisualStyleBackColor = false;
@@ -165,9 +175,10 @@
             this.btnAgregarProyecto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAgregarProyecto.Font = new System.Drawing.Font("Gill Sans Ultra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAgregarProyecto.ForeColor = System.Drawing.Color.Green;
-            this.btnAgregarProyecto.Location = new System.Drawing.Point(3, -5);
+            this.btnAgregarProyecto.Location = new System.Drawing.Point(4, -8);
+            this.btnAgregarProyecto.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnAgregarProyecto.Name = "btnAgregarProyecto";
-            this.btnAgregarProyecto.Size = new System.Drawing.Size(21, 23);
+            this.btnAgregarProyecto.Size = new System.Drawing.Size(32, 35);
             this.btnAgregarProyecto.TabIndex = 15;
             this.btnAgregarProyecto.Text = "+";
             this.btnAgregarProyecto.UseVisualStyleBackColor = false;
@@ -183,9 +194,10 @@
             this.btnEditarProyecto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEditarProyecto.Font = new System.Drawing.Font("Gill Sans Ultra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEditarProyecto.ForeColor = System.Drawing.Color.Red;
-            this.btnEditarProyecto.Location = new System.Drawing.Point(27, 5);
+            this.btnEditarProyecto.Location = new System.Drawing.Point(40, 8);
+            this.btnEditarProyecto.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnEditarProyecto.Name = "btnEditarProyecto";
-            this.btnEditarProyecto.Size = new System.Drawing.Size(14, 15);
+            this.btnEditarProyecto.Size = new System.Drawing.Size(21, 23);
             this.btnEditarProyecto.TabIndex = 31;
             this.btnEditarProyecto.UseVisualStyleBackColor = false;
             this.btnEditarProyecto.Click += new System.EventHandler(this.btnEditarProyecto_Click);
@@ -195,9 +207,10 @@
             this.panelBotonesProyecto.Controls.Add(this.btnAgregarProyecto);
             this.panelBotonesProyecto.Controls.Add(this.btnEditarProyecto);
             this.panelBotonesProyecto.Controls.Add(this.btnEliminarProyecto);
-            this.panelBotonesProyecto.Location = new System.Drawing.Point(200, 64);
+            this.panelBotonesProyecto.Location = new System.Drawing.Point(300, 98);
+            this.panelBotonesProyecto.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panelBotonesProyecto.Name = "panelBotonesProyecto";
-            this.panelBotonesProyecto.Size = new System.Drawing.Size(67, 19);
+            this.panelBotonesProyecto.Size = new System.Drawing.Size(100, 29);
             this.panelBotonesProyecto.TabIndex = 33;
             // 
             // panelBotonesServidor
@@ -205,9 +218,10 @@
             this.panelBotonesServidor.Controls.Add(this.btnAgregarServidor);
             this.panelBotonesServidor.Controls.Add(this.btnEditarServidor);
             this.panelBotonesServidor.Controls.Add(this.btnEliminarServidor);
-            this.panelBotonesServidor.Location = new System.Drawing.Point(200, 126);
+            this.panelBotonesServidor.Location = new System.Drawing.Point(300, 194);
+            this.panelBotonesServidor.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panelBotonesServidor.Name = "panelBotonesServidor";
-            this.panelBotonesServidor.Size = new System.Drawing.Size(67, 19);
+            this.panelBotonesServidor.Size = new System.Drawing.Size(100, 29);
             this.panelBotonesServidor.TabIndex = 34;
             // 
             // btnAgregarServidor
@@ -218,9 +232,10 @@
             this.btnAgregarServidor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAgregarServidor.Font = new System.Drawing.Font("Gill Sans Ultra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAgregarServidor.ForeColor = System.Drawing.Color.Green;
-            this.btnAgregarServidor.Location = new System.Drawing.Point(3, -5);
+            this.btnAgregarServidor.Location = new System.Drawing.Point(4, -8);
+            this.btnAgregarServidor.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnAgregarServidor.Name = "btnAgregarServidor";
-            this.btnAgregarServidor.Size = new System.Drawing.Size(21, 23);
+            this.btnAgregarServidor.Size = new System.Drawing.Size(32, 35);
             this.btnAgregarServidor.TabIndex = 15;
             this.btnAgregarServidor.Text = "+";
             this.btnAgregarServidor.UseVisualStyleBackColor = false;
@@ -236,9 +251,10 @@
             this.btnEditarServidor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEditarServidor.Font = new System.Drawing.Font("Gill Sans Ultra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEditarServidor.ForeColor = System.Drawing.Color.Red;
-            this.btnEditarServidor.Location = new System.Drawing.Point(27, 5);
+            this.btnEditarServidor.Location = new System.Drawing.Point(40, 8);
+            this.btnEditarServidor.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnEditarServidor.Name = "btnEditarServidor";
-            this.btnEditarServidor.Size = new System.Drawing.Size(14, 15);
+            this.btnEditarServidor.Size = new System.Drawing.Size(21, 23);
             this.btnEditarServidor.TabIndex = 31;
             this.btnEditarServidor.UseVisualStyleBackColor = false;
             this.btnEditarServidor.Click += new System.EventHandler(this.btnEditarServidor_Click);
@@ -251,20 +267,31 @@
             this.btnEliminarServidor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEliminarServidor.Font = new System.Drawing.Font("Gill Sans Ultra Bold Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEliminarServidor.ForeColor = System.Drawing.Color.Red;
-            this.btnEliminarServidor.Location = new System.Drawing.Point(43, -6);
+            this.btnEliminarServidor.Location = new System.Drawing.Point(64, -9);
+            this.btnEliminarServidor.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnEliminarServidor.Name = "btnEliminarServidor";
-            this.btnEliminarServidor.Size = new System.Drawing.Size(21, 26);
+            this.btnEliminarServidor.Size = new System.Drawing.Size(32, 40);
             this.btnEliminarServidor.TabIndex = 11;
             this.btnEliminarServidor.Text = "x";
             this.btnEliminarServidor.UseVisualStyleBackColor = false;
             this.btnEliminarServidor.Click += new System.EventHandler(this.btnEliminarServidor_Click);
             // 
+            // checkConsola
+            // 
+            this.checkConsola.AutoSize = true;
+            this.checkConsola.Location = new System.Drawing.Point(407, 102);
+            this.checkConsola.Name = "checkConsola";
+            this.checkConsola.Size = new System.Drawing.Size(22, 21);
+            this.checkConsola.TabIndex = 35;
+            this.checkConsola.UseVisualStyleBackColor = true;
+            // 
             // OpcionesForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(329, 365);
+            this.ClientSize = new System.Drawing.Size(514, 562);
             this.ControlBox = false;
+            this.Controls.Add(this.checkConsola);
             this.Controls.Add(this.panelBotonesServidor);
             this.Controls.Add(this.panelBotonesProyecto);
             this.Controls.Add(this.cLBPiezas);
@@ -276,6 +303,7 @@
             this.Controls.Add(this.btnDeployar);
             this.Controls.Add(this.btnCompilar);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
             this.Name = "OpcionesForm";
             this.Text = "";
             this.Load += new System.EventHandler(this.OpcionesForm_Load);
@@ -289,6 +317,7 @@
             this.Controls.SetChildIndex(this.cLBPiezas, 0);
             this.Controls.SetChildIndex(this.panelBotonesProyecto, 0);
             this.Controls.SetChildIndex(this.panelBotonesServidor, 0);
+            this.Controls.SetChildIndex(this.checkConsola, 0);
             this.panelBotonesProyecto.ResumeLayout(false);
             this.panelBotonesServidor.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -322,5 +351,7 @@
         private System.Windows.Forms.ToolTip tTDesplegar;
         private System.Windows.Forms.ToolTip tTEditarProyecto;
         private System.Windows.Forms.ToolTip tTEditarServidor;
+        private System.Windows.Forms.CheckBox checkConsola;
+        private System.Windows.Forms.ToolTip tTcheckConsola;
     }
 }

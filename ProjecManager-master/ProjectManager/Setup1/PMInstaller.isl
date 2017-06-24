@@ -1175,6 +1175,7 @@
 		<row><td>WindowsFolder</td><td>TARGETDIR</td><td>.:Windows</td><td/><td>0</td><td/></row>
 		<row><td>WindowsVolume</td><td>TARGETDIR</td><td>.:WinRoot</td><td/><td>0</td><td/></row>
 		<row><td>arodso_1_arodsolutions</td><td>ProgramMenuFolder</td><td>ARODSO~1|ARODSolutions</td><td/><td>1</td><td/></row>
+		<row><td>project_manager</td><td>arodso_1_arodsolutions</td><td>PROJEC~1|project manager</td><td/><td>1</td><td/></row>
 		<row><td>setup1</td><td>arodso_1_arodsolutions</td><td>Setup1</td><td/><td>1</td><td/></row>
 	</table>
 
@@ -3737,6 +3738,7 @@
 		<row><td>ID_STRING2</td><td>1033</td><td>ARODSolutions</td><td>0</td><td/><td>849674549</td></row>
 		<row><td>ID_STRING3</td><td>1033</td><td>LAUNCH~1.EXE|Launch ProjectManager.exe</td><td>0</td><td/><td>715487569</td></row>
 		<row><td>ID_STRING4</td><td>1033</td><td>ProjectManager.exe</td><td>0</td><td/><td>849676373</td></row>
+		<row><td>ID_STRING5</td><td>1033</td><td>LAUNCH~1.EXE|Launch ProjectManager.vshost.exe</td><td>0</td><td/><td>-1020972288</td></row>
 		<row><td>IIDS_UITEXT_FeatureUninstalled</td><td>1033</td><td>This feature will remain uninstalled.</td><td>0</td><td/><td>715512113</td></row>
 	</table>
 
@@ -3987,7 +3989,7 @@ UwBpAG4AZwBsAGUASQBtAGEAZwBlAAEARQB4AHAAcgBlAHMAcwA=
 		<row><td>ISTheme</td><td>InstallShield Blue.theme</td></row>
 		<row><td>ISUSLock</td><td>{9B1AFA6E-763D-450B-9397-223A2A0E716F}</td></row>
 		<row><td>ISUSSignature</td><td>{A2373C8D-5479-4C93-B259-5763BC63454B}</td></row>
-		<row><td>ISVisitedViews</td><td>viewAssistant</td></row>
+		<row><td>ISVisitedViews</td><td>viewAssistant,viewISToday</td></row>
 		<row><td>Limited</td><td>1</td></row>
 		<row><td>LockPermissionMode</td><td>1</td></row>
 		<row><td>MsiExecCmdLineOptions</td><td/></row>
@@ -4361,7 +4363,7 @@ UwBpAG4AZwBsAGUASQBtAGEAZwBlAAEARQB4AHAAcgBlAHMAcwA=
 		<row><td>PROGMSG_IIS_ROLLBACKWEBSERVICEEXTENSIONS</td><td>##IDS_PROGMSG_IIS_ROLLBACKWEBSERVICEEXTENSIONS##</td><td/></row>
 		<row><td>ProductCode</td><td>{FA00542C-12E9-442B-BF6B-3F8D296C3F84}</td><td/></row>
 		<row><td>ProductName</td><td>Project Manager</td><td/></row>
-		<row><td>ProductVersion</td><td>0.0.02</td><td/></row>
+		<row><td>ProductVersion</td><td>0.0.03</td><td/></row>
 		<row><td>ProgressType0</td><td>install</td><td/></row>
 		<row><td>ProgressType1</td><td>Installing</td><td/></row>
 		<row><td>ProgressType2</td><td>installed</td><td/></row>
