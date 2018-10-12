@@ -89,6 +89,7 @@ namespace ProjectManager
             this.tTEditarProyecto.SetToolTip(this.btnEditarProyecto, "Editar Proyectos.");
             this.tTEditarServidor.SetToolTip(this.btnEditarServidor, "Editar Servidores.");
             this.tTcheckConsola.SetToolTip(this.checkConsola, "Mantener abierta la consola al finalizar.");
+            this.tTCompilarApk.SetToolTip(this.btnCompilarAPK, "Compilar APK.");
 
             cargarComboBox(cmbProyectos);
             cargarComboBox(cmbServidores);
@@ -346,6 +347,11 @@ namespace ProjectManager
             this.Hide();
             frm.ShowDialog();
             this.Show();
+        }
+
+        private void toolTip1_Popup(object sender, PopupEventArgs e)
+        {
+
         }
         
     }

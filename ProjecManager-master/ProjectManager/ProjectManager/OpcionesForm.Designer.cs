@@ -57,6 +57,7 @@
             this.checkConsola = new System.Windows.Forms.CheckBox();
             this.tTcheckConsola = new System.Windows.Forms.ToolTip(this.components);
             this.btnCompilarAPK = new System.Windows.Forms.Button();
+            this.tTCompilarApk = new System.Windows.Forms.ToolTip(this.components);
             this.panelBotonesProyecto.SuspendLayout();
             this.panelBotonesServidor.SuspendLayout();
             this.SuspendLayout();
@@ -304,6 +305,10 @@
             this.btnCompilarAPK.UseVisualStyleBackColor = false;
             this.btnCompilarAPK.Click += new System.EventHandler(this.btnCompilarAPK_Click);
             // 
+            // tTCompilarApk
+            // 
+            this.tTCompilarApk.Popup += new System.Windows.Forms.PopupEventHandler(this.toolTip1_Popup);
+            // 
             // OpcionesForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -375,5 +380,6 @@
         private System.Windows.Forms.CheckBox checkConsola;
         private System.Windows.Forms.ToolTip tTcheckConsola;
         private System.Windows.Forms.Button btnCompilarAPK;
+        private System.Windows.Forms.ToolTip tTCompilarApk;
     }
 }
