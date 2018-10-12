@@ -94,6 +94,12 @@
     <Compile Include="AgregarServerForm.Designer.cs">
       <DependentUpon>AgregarServerForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="CompilarApkForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CompilarApkForm.Designer.cs">
+      <DependentUpon>CompilarApkForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="EditarProyectoForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -125,6 +131,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AgregarServerForm.resx">
       <DependentUpon>AgregarServerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CompilarApkForm.resx">
+      <DependentUpon>CompilarApkForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EditarProyectoForm.resx">
       <DependentUpon>EditarProyectoForm.cs</DependentUpon>

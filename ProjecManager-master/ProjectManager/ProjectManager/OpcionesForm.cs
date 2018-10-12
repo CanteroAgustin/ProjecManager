@@ -339,6 +339,14 @@ namespace ProjectManager
                 }
             }
         }
+
+        private void btnCompilarAPK_Click(object sender, EventArgs e)
+        {
+            CompilarApkForm frm = new CompilarApkForm();
+            this.Hide();
+            frm.ShowDialog();
+            this.Show();
+        }
         
     }
 }

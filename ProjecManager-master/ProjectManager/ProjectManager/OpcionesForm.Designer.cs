@@ -56,6 +56,7 @@
             this.tTEditarServidor = new System.Windows.Forms.ToolTip(this.components);
             this.checkConsola = new System.Windows.Forms.CheckBox();
             this.tTcheckConsola = new System.Windows.Forms.ToolTip(this.components);
+            this.btnCompilarAPK = new System.Windows.Forms.Button();
             this.panelBotonesProyecto.SuspendLayout();
             this.panelBotonesServidor.SuspendLayout();
             this.SuspendLayout();
@@ -132,7 +133,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(24, 260);
+            this.label3.Location = new System.Drawing.Point(13, 249);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(248, 20);
@@ -144,10 +145,10 @@
             this.cLBPiezas.BackColor = System.Drawing.SystemColors.Control;
             this.cLBPiezas.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.cLBPiezas.FormattingEnabled = true;
-            this.cLBPiezas.Location = new System.Drawing.Point(24, 298);
+            this.cLBPiezas.Location = new System.Drawing.Point(17, 294);
             this.cLBPiezas.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cLBPiezas.Name = "cLBPiezas";
-            this.cLBPiezas.Size = new System.Drawing.Size(446, 233);
+            this.cLBPiezas.Size = new System.Drawing.Size(575, 233);
             this.cLBPiezas.TabIndex = 10;
             // 
             // btnEliminarProyecto
@@ -285,12 +286,31 @@
             this.checkConsola.TabIndex = 35;
             this.checkConsola.UseVisualStyleBackColor = true;
             // 
+            // btnCompilarAPK
+            // 
+            this.btnCompilarAPK.BackColor = System.Drawing.Color.Transparent;
+            this.btnCompilarAPK.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnCompilarAPK.BackgroundImage")));
+            this.btnCompilarAPK.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnCompilarAPK.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlDark;
+            this.btnCompilarAPK.FlatAppearance.BorderSize = 0;
+            this.btnCompilarAPK.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCompilarAPK.Font = new System.Drawing.Font("Gill Sans Ultra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCompilarAPK.ForeColor = System.Drawing.Color.Red;
+            this.btnCompilarAPK.Location = new System.Drawing.Point(509, 98);
+            this.btnCompilarAPK.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnCompilarAPK.Name = "btnCompilarAPK";
+            this.btnCompilarAPK.Size = new System.Drawing.Size(89, 111);
+            this.btnCompilarAPK.TabIndex = 1;
+            this.btnCompilarAPK.UseVisualStyleBackColor = false;
+            this.btnCompilarAPK.Click += new System.EventHandler(this.btnCompilarAPK_Click);
+            // 
             // OpcionesForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(514, 562);
+            this.ClientSize = new System.Drawing.Size(609, 547);
             this.ControlBox = false;
+            this.Controls.Add(this.btnCompilarAPK);
             this.Controls.Add(this.checkConsola);
             this.Controls.Add(this.panelBotonesServidor);
             this.Controls.Add(this.panelBotonesProyecto);
@@ -318,6 +338,7 @@
             this.Controls.SetChildIndex(this.panelBotonesProyecto, 0);
             this.Controls.SetChildIndex(this.panelBotonesServidor, 0);
             this.Controls.SetChildIndex(this.checkConsola, 0);
+            this.Controls.SetChildIndex(this.btnCompilarAPK, 0);
             this.panelBotonesProyecto.ResumeLayout(false);
             this.panelBotonesServidor.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -353,5 +374,6 @@
         private System.Windows.Forms.ToolTip tTEditarServidor;
         private System.Windows.Forms.CheckBox checkConsola;
         private System.Windows.Forms.ToolTip tTcheckConsola;
+        private System.Windows.Forms.Button btnCompilarAPK;
     }
 }
